@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { Logos } from "@/components/Logos";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
+import { AccuracyValidation } from "@/components/AccuracyValidation";
 import { UseCases } from "@/components/UseCases";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -37,6 +38,7 @@ function Index() {
         <Logos />
         <HowItWorks />
         <Features />
+        <AccuracyValidation />
         <UseCases />
         <CTA />
       </main>
