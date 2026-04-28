@@ -65,13 +65,13 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-28 bg-surface/30 border-y border-border">
+    <section id="features" className="py-28 bg-surface/40 border-y border-border">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 animate-fade-up">
           <div className="max-w-2xl">
-            <p className="text-xs font-mono uppercase tracking-[0.2em] text-lime mb-4">— What's inside</p>
+            <p className="text-xs font-mono uppercase tracking-[0.2em] text-royal mb-4">— What's inside</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight text-balance">
-              Built for the field. <br /> Engineered for the factory.
+              Built for the field. <br /> Engineered for the <span className="brand-text">cutting table</span>.
             </h2>
           </div>
           <p className="text-muted-foreground max-w-sm">
@@ -81,15 +81,16 @@ export function Features() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
-          {features.map((f) => (
+          {features.map((f, i) => (
             <article
               key={f.title}
-              className="bg-background p-8 hover:bg-surface transition-colors"
+              className="bg-card p-8 hover:bg-surface-elevated transition-all group animate-fade-up"
+              style={{ animationDelay: `${i * 70}ms` }}
             >
-              <div className="w-11 h-11 rounded-lg bg-lime/10 border border-lime/30 grid place-items-center text-lime mb-6">
+              <div className="w-11 h-11 rounded-lg brand-gradient grid place-items-center text-white mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                 {f.icon}
               </div>
-              <h3 className="font-display text-xl font-semibold mb-3">{f.title}</h3>
+              <h3 className="font-display text-xl font-semibold mb-3 group-hover:text-royal transition-colors">{f.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
             </article>
           ))}

@@ -12,17 +12,17 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FitScan AI — Automated body measurement from a phone camera" },
+      { title: "Metriva.ai — Automated body measurement from a phone camera" },
       {
         name: "description",
         content:
-          "Measure 2,000+ people in minutes. FitScan AI converts a front and side photo into shoulder, chest, waist, hip, sleeve and inseam — accurate to ±1 cm.",
+          "Measure 2,000+ people in minutes. Metriva.ai converts a front and side photo into shoulder, chest, waist, hip, sleeve and inseam — accurate to ±1 cm.",
       },
-      { property: "og:title", content: "FitScan AI — Body measurement, automated" },
+      { property: "og:title", content: "Metriva.ai — Body measurement, automated" },
       {
         property: "og:description",
         content:
-          "Replace the tape with a phone. Six measurements in five seconds, ±1 cm accurate. Built for uniforms, tailoring and corporate outfitting.",
+          "Replace the tape with a phone. Six measurements in five seconds, ±1 cm accurate. Built for tailors, uniform manufacturers and corporate outfitting.",
       },
     ],
   }),
