@@ -23,9 +23,12 @@ export function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden sm:inline text-sm text-muted-foreground hover:text-foreground transition-colors">
-            Sign in
-          </a>
+          <Link
+            to="/dashboard"
+            className="hidden sm:inline text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Dashboard
+          </Link>
           <a
             href="#cta"
             className="inline-flex items-center gap-1.5 bg-lime text-lime-foreground px-4 py-2 rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
