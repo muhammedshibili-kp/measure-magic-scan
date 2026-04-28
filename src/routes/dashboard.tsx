@@ -2,11 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CsvUpload } from "@/components/dashboard/CsvUpload";
 import { ExportBar } from "@/components/dashboard/ExportBar";
 import { PeopleTable } from "@/components/dashboard/PeopleTable";
+import logo from "@/assets/metriva-logo.png";
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Operator dashboard — FitScan AI" },
+      { title: "Operator dashboard — Metriva.ai" },
       { name: "description", content: "Import rosters, run scans, review measurements, and export to Excel." },
     ],
   }),
@@ -18,13 +19,14 @@ function DashboardPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-surface/40 backdrop-blur sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative w-6 h-6">
-              <div className="absolute inset-0 rounded-md border border-lime/60" />
-              <div className="absolute inset-1 rounded-sm bg-lime" />
-            </div>
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <img
+              src={logo}
+              alt="Metriva.ai"
+              className="w-7 h-7 object-contain transition-transform group-hover:rotate-[8deg]"
+            />
             <span className="font-display font-bold tracking-tight">
-              FitScan<span className="text-lime">.</span>AI
+              Metriva<span className="text-cyan-glow">.ai</span>
             </span>
             <span className="ml-2 text-xs font-mono text-muted-foreground border border-border rounded px-2 py-0.5">
               OPERATOR
